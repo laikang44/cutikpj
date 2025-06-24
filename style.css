@@ -19,7 +19,7 @@ h3 span {
 }
 
 h3:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -27,6 +27,10 @@ h3:after {
   height: 0.5em;
   border-top: 1px solid rgb(102, 101, 101);
   z-index: -1;
+}
+
+h4 {
+  text-align: center;
 }
 
 .applicationbtncontainer {
