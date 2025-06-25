@@ -1,21 +1,21 @@
 h1 {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   position: relative;
 }
 
 h3 span {
   background-color: white;
-  padding-right: 0.5rem;
+  padding-right: 0.3rem;
 }
 
 h3:after {
@@ -31,6 +31,8 @@ h3:after {
 
 h4 {
   text-align: center;
+  font-size: 1rem;
+  color: red;
 }
 
 .applicationbtncontainer {
@@ -44,11 +46,11 @@ h4 {
 .applicationbtn {
   width: 80%;
   height: 100px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .approvalbtn {
   width: 80%;
   height: 100px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
