@@ -59,12 +59,20 @@
 
         <br><br>
 
-        <button
+      <button
         class="cancellationbtn"
         name="cancellationbtn"
         onclick="window.open('https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link')"
       >
-        Borang Pembatalan
+        Pembatalan
+      </button>
+
+      <button
+        class="cancellationbtn"
+        name="cancellationbtn"
+        onclick="copyLink()"
+      >
+        Copy Link Pembatalan
       </button>
       </form>
     </div>
@@ -157,3 +165,14 @@
   </div>
   </body>
 </html>
+
+<script>
+
+  function copyLink() {
+
+    navigator.clipboard.writeText("https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link")
+    alert('Link Copied to clipboard')
+
+  }
+
+</script>
