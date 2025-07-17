@@ -170,8 +170,9 @@
 
   function copyLink() {
 
-    navigator.clipboard.writeText("https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link")
-    alert('Link Copied to clipboard')
+    navigator.clipboard.writeText("https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link");
+    alert('Link Copied to clipboard');
+    event.preventDefault();
 
   }
 
