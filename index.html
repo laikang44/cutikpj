@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cuti Staff KPJ</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
 
   <body>
+    <div class="overlay" id="overlay">
+      <div class="overlaycontent" id="overlaycontent">
+        <input id="pass" class="pass" type="password" placeholder="password"></input>
+        <br>
+        <button class="overlaybtn1" onclick="passwordCheck()">Hantar</button>
+        <br>
+        <button class="overlaybtn2" onclick="overlayOff()">Tutup</button>
+      </div>
+    </div>
     <div>
       <h1>Klinik Pergigian Jasin</h1>
       <h1>Perancangan Cuti/Off</h1>
@@ -23,25 +33,32 @@
         Borang Permohonan Cuti/Off
       </button>
       
-      <button
+      <!-- <button
         class="applicationbtn"
         onclick="window.open('https://docs.google.com/spreadsheets/d/1XhHu-RvAQJVU4HO79Kw5C6RR0Z8L7AzHsyqQ24af6ro/edit?usp=drive_link')"
       >
         Senarai Permohonan
-      </button>
+      </button> -->
+    </div>
+
+    <div class="info">
+      <a class="info">*Sila membuat semakan di senarai permohonan untuk mengetahui status permohonan cuti</a>
+      <br>
+      <a class="info">*Kelulusan permohonan cuti adalah melalui HRMIS</a>
     </div>
 
     <br />
 
     <div class="topline"> </div>
 
-    <h5 class="canceltitle">Pembatalan</h2>
+    <h5 class="canceltitle">Semakan Senarai Permohonan</h2>
 
     <div class="cancellationbtncontainer">
       <form class="form">
 
-        <label for="post">Jawatan:</label>
-        <select name="post" id="post">
+        <label for="post1">Jawatan</label>
+        <br><br>
+        <select name="post1" id="post1">
           <option value="PP">Pegawai Pergigian</option>
           <option value="JP">Juruterapi Pergigian</option>
           <option value="JT">Juruteknik Pergigian</option>
@@ -51,23 +68,83 @@
         </select>
 
         <br><br>
-
-        <label for="post">Nama:</label>
-        <select name="post" id="post">
-          <option value="PP">Dr Lai Jing Kang</option>
+ 
+        <label for="name1">Nama</label>
+        <br><br>
+        <select name="name1" id="name1">
+          <option>DR LAI JING KANG</option>
+          <option>DR AKMAL SYAFI' BIN DOREYAT</option>
+          <option>DR NUR FARAH IZZATI BINTI ZAINORDIN</option>
+          <option>DR AMNI AMIRAH BINTI SAIFULAZLAN</option>
+          <option>DR FARIDAH SUHAIMI</option>
+          <option>DR NOOR ELLYU HAFIZAH BINTI ZAHAISHA</option>
+          <option>DR LEE SUKHIN</option>
+          <option>DR NUR FATIN BINTI MOHAMMED</option>
+          <option>DR NURUL AISYAH BIN MOHAMMAD SUFIAN</option>
+          <option>DR DURGHA A/P GUNASEGARAN</option>
+          <option>DR IMRAN SHAFIQ BIN ABD HISAM</option>
+          <option>DR MUHAMMAD HAIQAL BIN LUPIAMIR</option>
+          <option>DR JULIA IZZATY BINTI MOHD JUFFRY</option>
+          <option>DR EMILYN GAN WENQI</option>
+          <option>DR IMRAN HADI BIN MOHAMAD NIDZAM</option>
+          <option>DR WILLIAM TAN YAN WEI</option>
         </select>
+
+      </form>
 
         <br><br>
 
       <button
         class="cancellationbtn"
         name="cancellationbtn"
-        onclick="window.open('https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link')"
+        onclick="applicationList()"
+      >
+        Senarai Permohonan
+      </button>
+    
+    <br />
+    <br />
+
+    <div class="topline"> </div>
+
+    <h5 class="canceltitle">Pembatalan</h2>
+
+    <div class="cancellationbtncontainer">
+      <form class="form">
+
+        <label for="post2">Jawatan</label>
+        <br><br>
+        <select name="post2" id="post2">
+          <option value="Head">PPYM</option>
+          <option value="PP">Pegawai Pergigian</option>
+          <option value="JP">Juruterapi Pergigian</option>
+          <option value="JT">Juruteknik Pergigian</option>
+          <option value="PPP">Pembantu Pembedahan Pergigian</option>
+          <option value="PPK">Pembantu Perawatan Kesihatan</option>
+          <option value="PKA">Pemandu</option>
+        </select>
+
+        <br><br>
+ 
+        <label for="name2">Nama</label>
+        <br><br>
+        <select name="name2" id="name2">
+          <option>DR NOOR ARDINA BINTI BUANG</option>
+        </select>
+
+      </form>
+
+        <br><br>
+
+      <button
+        class="cancellationbtn"
+        name="cancellationbtn"
+        onclick="cancellationForm()"
       >
         Pembatalan
       </button>
 
-      <button
+      <!-- <button
         class="cancellationbtn"
         name="cancellationbtn"
         onclick="copyLink()"
@@ -77,7 +154,7 @@
       </form>
     </div>
 
-    <br />
+    <br /> -->
 
     <!--
 
@@ -86,12 +163,13 @@
     -->
 
     <br />
+    <br />
 
     <div class="topline"> </div>
 
     <div>
       <h2>Cuti/Off Yang Dipohon</h2>
-      <h4>*(Sila merujuk kepada hrmis untuk kelulusan cuti)</h4>
+      <a class="info">*(Sila merujuk kepada hrmis untuk kelulusan cuti)</a>
 
     </div>
 
@@ -164,14 +242,535 @@
 
   </div>
   </body>
+
 </html>
 
 <script>
 
-  function copyLink() {
+  function copyLink () {
 
-    navigator.clipboard.writeText("https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link")
-    alert('Link Copied to clipboard')
+    navigator.clipboard.writeText("https://docs.google.com/spreadsheets/d/1x611ZpQV-3bxlEiqFn1av88VE4MqbDTxm34Z_XAtO68/edit?usp=drive_link");
+    alert('Link copied to clipboard');
+
+  }
+
+  function applicationList () {
+
+    
+  }
+
+  function passwordCheck () {
+
+    var inputPass = document.getElementById("pass").value;
+
+    if (inputPass === check()) {
+
+      alert("belum siap... sabar...")
+
+    }
+
+    else {
+
+      alert("Sila jangan sibuk batal cuti orang lain :p")
+
+    }
+
+  }
+
+  function cancellationForm() {
+
+    var name = document.getElementById("name2");
+    var element = name.options[name.selectedIndex].textContent;
+
+    if (element === "DR NOOR ARDINA BINTI BUANG") {
+
+      document.getElementById("overlay").style.display = "block";
+
+    }
+
+    else if (element === "DR LAI JING KANG") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeMm7VikBu0ria8_oDuFEfipx1Ekn08Si-TtE79LUga1qUlbQ/viewform?usp=sharing&ouid=105928325477420175304");
+      
+    }
+
+    else {
+
+      alert(element);
+
+    }
+
+  }
+
+  function overlayOff() {
+
+    document.getElementById("overlay").style.display = "none";
+
+  }
+
+  document.getElementById("post1").onchange = function () {
+
+    var opt1 = document.createElement("option");
+    var opt2 = document.createElement("option");
+    var opt3 = document.createElement("option");
+    var opt4 = document.createElement("option");
+    var opt5 = document.createElement("option");
+    var opt6 = document.createElement("option");
+    var opt7 = document.createElement("option");
+    var opt8 = document.createElement("option");
+    var opt9 = document.createElement("option");
+    var opt10 = document.createElement("option");
+    var opt11 = document.createElement("option");
+    var opt12 = document.createElement("option");
+    var opt13 = document.createElement("option");
+    var opt14 = document.createElement("option");
+    var opt15 = document.createElement("option");
+    var opt16 = document.createElement("option");
+    var opt17 = document.createElement("option");
+    var opt18 = document.createElement("option");
+    var opt19 = document.createElement("option");
+    var opt20 = document.createElement("option");
+    var opt21 = document.createElement("option");
+    var opt22 = document.createElement("option");
+    var opt23 = document.createElement("option");
+    var opt24 = document.createElement("option");
+    var opt25 = document.createElement("option");
+    var opt26 = document.createElement("option");
+    var opt27 = document.createElement("option");
+    var opt28 = document.createElement("option");
+    var opt29 = document.createElement("option");
+    var opt30 = document.createElement("option");
+
+    var post = document.getElementById("post1");
+    var name = document.getElementById("name1");
+    var element = post.options[post.selectedIndex].value;
+    //alert(element);
+
+    if (element === "Head") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "DR NOOR ARDINA BINTI BUANG";
+      name.appendChild(opt1);
+
+    }
+
+    else if (element === "PP") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "DR LAI JING KANG";
+      opt2.textContent = "DR AKMAL SYAFI' BIN DOREYAT";
+      opt3.textContent = "DR NUR FARAH IZZATI BINTI ZAINORDIN";
+      opt4.textContent = "DR AMNI AMIRAH BINTI SAIFULAZLAN";
+      opt5.textContent = "DR FARIDAH SUHAIMI";
+      opt6.textContent = "DR NOOR ELLYU HAFIZAH BINTI ZAHAISHA";
+      opt7.textContent = "DR LEE SUKHIN";
+      opt8.textContent = "DR NUR FATIN BINTI MOHAMMED";
+      opt9.textContent = "DR NURUL AISYAH BIN MOHAMMAD SUFIAN";
+      opt10.textContent = "DR DURGHA A/P GUNASEGARAN";
+      opt11.textContent = "DR IMRAN SHAFIQ BIN ABD HISAM";
+      opt12.textContent = "DR MUHAMMAD HAIQAL BIN LUPIAMIR";
+      opt13.textContent = "DR JULIA IZZATY BINTI MOHD JUFFRY";
+      opt14.textContent = "DR EMILYN GAN WENQI";
+      opt15.textContent = "DR IMRAN HADI BIN MOHAMAD NIDZAM";
+      opt16.textContent = "DR WILLIAM TAN YAN WEI";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+      name.appendChild(opt7);
+      name.appendChild(opt8);
+      name.appendChild(opt9);
+      name.appendChild(opt10);
+      name.appendChild(opt11);
+      name.appendChild(opt12);
+      name.appendChild(opt13);
+      name.appendChild(opt14);
+      name.appendChild(opt15);
+      name.appendChild(opt16);
+
+    }
+
+    else if (element === "JP") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "NINI LIYANA BINTI MOHD AININ";
+      opt2.textContent = "SITI SARAH BINTI MAT ALWI";
+      opt3.textContent = "NOOR NADIA BINTI HUSAINI";
+      opt4.textContent = "MARIANA BINTI ABD RAHMAN";
+      opt5.textContent = "NURSYAHIDAH BINTI BAHAR";
+      opt6.textContent = "AKMAL HAZIRAH BINTI MOHD ESA";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+
+    }
+
+    else if (element === "JT") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "NORMALINA BINTI MD NOOR";
+      opt2.textContent = "NOR MISZIYANA BINTI MISBAH";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+
+    }
+
+    else if (element === "PPP") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "SITI ARFAH BINTI ABD MOKMIN";
+      opt2.textContent = "NOOR FADHILAH BINTI AMIR";
+      opt3.textContent = "ASMANIZA BINTI MOHD SAFIAN";
+      opt4.textContent = "MOHD FARHAN BIN AB LATIFF";
+      opt5.textContent = "MOHD KHAIRULAMRY BIN HASSAN";
+      opt6.textContent = "KHAZIZUL BIN PETA";
+      opt7.textContent = "SITI AISHAH BINTI MUHANI";
+      opt8.textContent = "NORHAZAMI BINTI RAHMAT";
+      opt9.textContent = "MOHD SHAHRULMIZA AKMAL BIN MARIMI";
+      opt10.textContent = "MOHAMAD HAFEEZ BIN HARON";
+      opt11.textContent = "CHARLIE VALENTINE";
+      opt12.textContent = "MOHD SHAHRIL BIN MOHAMAD RAZI";
+      opt13.textContent = "MOHD SAFREEN BIN KAMAROLZAMAN";
+      opt14.textContent = "NURUL AIN BINTI MOHAMAD";
+      opt15.textContent = "MAGDALINA EMILIA ANAK JOHNBENOS";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+      name.appendChild(opt7);
+      name.appendChild(opt8);
+      name.appendChild(opt9);
+      name.appendChild(opt10);
+      name.appendChild(opt11);
+      name.appendChild(opt12);
+      name.appendChild(opt13);
+      name.appendChild(opt14);
+      name.appendChild(opt15);
+
+    }
+
+    else if (element === "PPK") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "NUR SHUHADA BINTI ZAINAL";
+      opt2.textContent = "NORZILLA BINTI MOHAMMAD ARIPIN";
+      opt3.textContent = "S. SHUMATHY SUBRAMANIAM";
+      opt4.textContent = "AZLIZAM BIN A.Z ZULKIFLI";
+      opt5.textContent = "NURAIEN BINTI OTHMAN";
+      opt6.textContent = "NOORHAYATI BINTI MD NASIR";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+
+    }
+
+    else if (element === "PKA") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "MOHD RAZI BIN MOHD SAID";
+      opt2.textContent = "SHAMSUDIN BIN ABAS";
+      opt3.textContent = "MOHD FARID BIN ABU HASSAN";
+      opt4.textContent = "ZAIDI BIN MAK TAN";
+      opt5.textContent = "MOHAMAD FAIZ BIN AHMAD";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+
+    }
+
+  }
+
+  document.getElementById("post2").onchange = function () {
+
+    var opt1 = document.createElement("option");
+    var opt2 = document.createElement("option");
+    var opt3 = document.createElement("option");
+    var opt4 = document.createElement("option");
+    var opt5 = document.createElement("option");
+    var opt6 = document.createElement("option");
+    var opt7 = document.createElement("option");
+    var opt8 = document.createElement("option");
+    var opt9 = document.createElement("option");
+    var opt10 = document.createElement("option");
+    var opt11 = document.createElement("option");
+    var opt12 = document.createElement("option");
+    var opt13 = document.createElement("option");
+    var opt14 = document.createElement("option");
+    var opt15 = document.createElement("option");
+    var opt16 = document.createElement("option");
+    var opt17 = document.createElement("option");
+    var opt18 = document.createElement("option");
+    var opt19 = document.createElement("option");
+    var opt20 = document.createElement("option");
+    var opt21 = document.createElement("option");
+    var opt22 = document.createElement("option");
+    var opt23 = document.createElement("option");
+    var opt24 = document.createElement("option");
+    var opt25 = document.createElement("option");
+    var opt26 = document.createElement("option");
+    var opt27 = document.createElement("option");
+    var opt28 = document.createElement("option");
+    var opt29 = document.createElement("option");
+    var opt30 = document.createElement("option");
+
+    var post = document.getElementById("post2");
+    var name = document.getElementById("name2");
+    var element = post.options[post.selectedIndex].value;
+    //alert(element);
+
+    if (element === "Head") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "DR NOOR ARDINA BINTI BUANG";
+      name.appendChild(opt1);
+
+    }
+
+    else if (element === "PP") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "DR LAI JING KANG";
+      opt2.textContent = "DR AKMAL SYAFI' BIN DOREYAT";
+      opt3.textContent = "DR NUR FARAH IZZATI BINTI ZAINORDIN";
+      opt4.textContent = "DR AMNI AMIRAH BINTI SAIFULAZLAN";
+      opt5.textContent = "DR FARIDAH SUHAIMI";
+      opt6.textContent = "DR NOOR ELLYU HAFIZAH BINTI ZAHAISHA";
+      opt7.textContent = "DR LEE SUKHIN";
+      opt8.textContent = "DR NUR FATIN BINTI MOHAMMED";
+      opt9.textContent = "DR NURUL AISYAH BIN MOHAMMAD SUFIAN";
+      opt10.textContent = "DR DURGHA A/P GUNASEGARAN";
+      opt11.textContent = "DR IMRAN SHAFIQ BIN ABD HISAM";
+      opt12.textContent = "DR MUHAMMAD HAIQAL BIN LUPIAMIR";
+      opt13.textContent = "DR JULIA IZZATY BINTI MOHD JUFFRY";
+      opt14.textContent = "DR EMILYN GAN WENQI";
+      opt15.textContent = "DR IMRAN HADI BIN MOHAMAD NIDZAM";
+      opt16.textContent = "DR WILLIAM TAN YAN WEI";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+      name.appendChild(opt7);
+      name.appendChild(opt8);
+      name.appendChild(opt9);
+      name.appendChild(opt10);
+      name.appendChild(opt11);
+      name.appendChild(opt12);
+      name.appendChild(opt13);
+      name.appendChild(opt14);
+      name.appendChild(opt15);
+      name.appendChild(opt16);
+
+    }
+
+    else if (element === "JP") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "NINI LIYANA BINTI MOHD AININ";
+      opt2.textContent = "SITI SARAH BINTI MAT ALWI";
+      opt3.textContent = "NOOR NADIA BINTI HUSAINI";
+      opt4.textContent = "MARIANA BINTI ABD RAHMAN";
+      opt5.textContent = "NURSYAHIDAH BINTI BAHAR";
+      opt6.textContent = "AKMAL HAZIRAH BINTI MOHD ESA";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+
+    }  
+
+    else if (element === "JT") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "NORMALINA BINTI MD NOOR";
+      opt2.textContent = "NOR MISZIYANA BINTI MISBAH";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+
+    }
+
+    else if (element === "PPP") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "SITI ARFAH BINTI ABD MOKMIN";
+      opt2.textContent = "NOOR FADHILAH BINTI AMIR";
+      opt3.textContent = "ASMANIZA BINTI MOHD SAFIAN";
+      opt4.textContent = "MOHD FARHAN BIN AB LATIFF";
+      opt5.textContent = "MOHD KHAIRULAMRY BIN HASSAN";
+      opt6.textContent = "KHAZIZUL BIN PETA";
+      opt7.textContent = "SITI AISHAH BINTI MUHANI";
+      opt8.textContent = "NORHAZAMI BINTI RAHMAT";
+      opt9.textContent = "MOHD SHAHRULMIZA AKMAL BIN MARIMI";
+      opt10.textContent = "MOHAMAD HAFEEZ BIN HARON";
+      opt11.textContent = "CHARLIE VALENTINE";
+      opt12.textContent = "MOHD SHAHRIL BIN MOHAMAD RAZI";
+      opt13.textContent = "MOHD SAFREEN BIN KAMAROLZAMAN";
+      opt14.textContent = "NURUL AIN BINTI MOHAMAD";
+      opt15.textContent = "MAGDALINA EMILIA ANAK JOHNBENOS";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+      name.appendChild(opt7);
+      name.appendChild(opt8);
+      name.appendChild(opt9);
+      name.appendChild(opt10);
+      name.appendChild(opt11);
+      name.appendChild(opt12);
+      name.appendChild(opt13);
+      name.appendChild(opt14);
+      name.appendChild(opt15);
+
+    }
+
+    else if (element === "PPK") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "NUR SHUHADA BINTI ZAINAL";
+      opt2.textContent = "NORZILLA BINTI MOHAMMAD ARIPIN";
+      opt3.textContent = "S. SHUMATHY SUBRAMANIAM";
+      opt4.textContent = "AZLIZAM BIN A.Z ZULKIFLI";
+      opt5.textContent = "NURAIEN BINTI OTHMAN";
+      opt6.textContent = "NOORHAYATI BINTI MD NASIR";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+      name.appendChild(opt6);
+
+    }
+
+    else if (element === "PKA") {
+
+      name.innerHTML = "";
+
+      for (i = name.options.length - 1; i >= 0; i--) {
+
+        name.removeChild(name.options[i]);
+
+      }
+
+      opt1.textContent = "MOHD RAZI BIN MOHD SAID";
+      opt2.textContent = "SHAMSUDIN BIN ABAS";
+      opt3.textContent = "MOHD FARID BIN ABU HASSAN";
+      opt4.textContent = "ZAIDI BIN MAK TAN";
+      opt5.textContent = "MOHAMAD FAIZ BIN AHMAD";
+      name.appendChild(opt1);
+      name.appendChild(opt2);
+      name.appendChild(opt3);
+      name.appendChild(opt4);
+      name.appendChild(opt5);
+
+    }
 
   }
 
