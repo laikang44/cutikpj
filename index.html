@@ -34,66 +34,64 @@
       </button>
     </div>
 
-    <div class="info">
-      <a class="info">*Sila membuat semakan di senarai permohonan untuk mengetahui status permohonan cuti</a>
-      <br>
-      <a class="info">*Kelulusan permohonan cuti adalah melalui HRMIS</a>
-    </div>
-
     <br />
 
     <div class="topline"> </div>
 
     <h5 class="canceltitle">Semakan Senarai Permohonan</h2>
 
+    <div class="important">
+
+      <a class="important">Sila membuat semakan di senarai permohonan untuk mengetahui status permohonan cuti</a>
+      <br>
+      <br>
+      <a class="important">Kelulusan permohonan cuti adalah melalui HRMIS</a>
+      <br>
+      <br>
+      <a class="veryimportant">Permohonan akan ditolak sekiranya melebihi 3 bulan dari tarikh permohonan</a>
+      <br>
+      <br>
+      <a class="veryimportant">Permohonan akan ditolak sekiranya jumlah staff bercuti telah melebihi had</a>
+      <br>
+      <br>
+      <a class="important">Bilangan staf bercuti pada suatu masa yang dibenarkan mengikut jawatan</a>
+      <br>
+      <br>
+      <table class="importanttable">
+        <tr>
+          <th>PP</th>
+          <th>JP</th>
+          <th>JT</th>
+          <th>PPP</th>
+          <th>PPK</th>
+          <th>PKA</th>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>2</td>
+          <td>1</td>
+          <td>4</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+      </table>
+
+    </div>
+
     <div class="cancellationbtncontainer">
-      <form class="form">
 
-        <label for="post1">Jawatan</label>
-        <br><br>
-        <select name="post1" id="post1">
-          <option value="PP">Pegawai Pergigian</option>
-          <option value="JP">Juruterapi Pergigian</option>
-          <option value="JT">Juruteknik Pergigian</option>
-          <option value="PPP">Pembantu Pembedahan Pergigian</option>
-          <option value="PPK">Pembantu Perawatan Kesihatan</option>
-          <option value="PKA">Pemandu</option>
-        </select>
-
-        <br><br>
- 
-        <label for="name1">Nama</label>
-        <br><br>
-        <select name="name1" id="name1">
-          <option>DR LAI JING KANG</option>
-          <option>DR AKMAL SYAFI' BIN DOREYAT</option>
-          <option>DR NUR FARAH IZZATI BINTI ZAINORDIN</option>
-          <option>DR AMNI AMIRAH BINTI SAIFULAZLAN</option>
-          <option>DR FARIDAH SUHAIMI</option>
-          <option>DR NOOR ELLYU HAFIZAH BINTI ZAHAISHA</option>
-          <option>DR LEE SUKHIN</option>
-          <option>DR NUR FATIN BINTI MOHAMMED</option>
-          <option>DR NURUL AISYAH BIN MOHAMMAD SUFIAN</option>
-          <option>DR DURGHA A/P GUNASEGARAN</option>
-          <option>DR IMRAN SHAFIQ BIN ABD HISAM</option>
-          <option>DR MUHAMMAD HAIQAL BIN LUPIAMIR</option>
-          <option>DR JULIA IZZATY BINTI MOHD JUFFRY</option>
-          <option>DR EMILYN GAN WENQI</option>
-          <option>DR IMRAN HADI BIN MOHAMAD NIDZAM</option>
-          <option>DR WILLIAM TAN YAN WEI</option>
-        </select>
-
-      </form>
-
-        <br><br>
+      <br>
+      <br>
 
       <button
         class="cancellationbtn"
         name="cancellationbtn"
-        onclick="applicationList()"
+        onclick="window.open('https://docs.google.com/spreadsheets/d/1NWqVCidXVDsWZHesOEFrA_EAV3lZxSDz4dmiyVcrF5c/edit?usp=drive_link')"
       >
         Senarai Permohonan
       </button>
+
+    </div>
     
     <br />
     <br />
@@ -137,6 +135,8 @@
         Pembatalan
       </button>
 
+    </div> 
+
     <br />
     <br />
 
@@ -144,8 +144,6 @@
 
     <div>
       <h2>Cuti/Off Yang Dipohon</h2>
-      <a class="info">*(Sila merujuk kepada hrmis untuk kelulusan cuti)</a>
-
     </div>
 
     <br />
@@ -233,13 +231,13 @@
 
     if (inputPass === check()) {
 
-      alert("belum siap... sabar...")
+      window.open("https://calendar.google.com/calendar?authuser=0")
 
     }
 
     else {
 
-      alert("Sila jangan sibuk batal cuti orang lain :p")
+      alert("Kata laluan salah ><......Sila jangan sibuk batal cuti orang lain :p")
 
     }
 
@@ -258,8 +256,302 @@
 
     else if (element === "DR LAI JING KANG") {
 
-      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeMm7VikBu0ria8_oDuFEfipx1Ekn08Si-TtE79LUga1qUlbQ/viewform?usp=sharing&ouid=105928325477420175304");
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeMm7VikBu0ria8_oDuFEfipx1Ekn08Si-TtE79LUga1qUlbQ/viewform?usp=header");
       
+    }
+
+    else if (element === "DR AKMAL SYAFI BIN DOREYAT") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdtD1O5ggn33oFGgEjizEwYf7Q7ENT8s0FMsxwKSEdqJ7f39A/viewform?usp=header");
+
+    }
+
+    else if (element === "DR NUR FARAH IZZATI BINTI ZAINORDIN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdUEXHS3joFkjSi_xVFLkIFMPBKE9ilZGgg89xc3J6Zlsykag/viewform?usp=header");
+
+    }
+
+    else if (element === "DR AMNI AMIRAH BINTI SAIFULAZLAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdFdfbJv6nae5Igzz3SSe8KiUUakSqVBei2TpYweWXzKJZPsg/viewform?usp=header");
+
+    }
+
+    else if (element === "DR FARIDAH SUHAIMI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeR5wVUl6rGhRLKi6pwjidsUZHNkjX299P4Cx_-V_PYmSfMdw/viewform?usp=header");
+
+    }
+
+    else if (element === "DR NOOR ELLYU HAFIZAH BINTI ZAHAISHA") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSc15HoeuxbqHuCQmtG71YALXF1BzU215JLG3fh-0i_0JDWNpQ/viewform?usp=header");
+
+    }
+
+    else if (element === "DR LEE SUKHIN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSci7m7ziJ8c0zI53riUuFzBkqRaK1HF9ugliYm6HKmkSc0w3A/viewform?usp=header");
+
+    }
+
+    else if (element === "DR NUR FATIN BINTI MOHAMMED") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSd6B-rHdJzdBHvnvTuMeqsS0VsFEFmBTCL2JHy0N1OBxsR9jg/viewform?usp=header");
+
+    }
+
+    else if (element === "DR NURUL AISYAH BIN MOHAMMAD SUFIAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdIQx41qJqoLuFn0oL9pa9Y5TjYv-hrs58Xyyxhyizj2MKCzw/viewform?usp=header");
+
+    }
+
+    else if (element === "DR DURGHA A/P GUNASEGARAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScM8ceVnHgIgxjQ7zOjB2zc6vub_w_vmdU76d00PsnnYCDP3Q/viewform?usp=header");
+
+    }
+
+    else if (element === "DR IMRAN SHAFIQ BIN ABD HISAM") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSfYEAKMExakbvgqtOtoKEcCNwXd1-Rk028A1kMnTo8djlB7Rg/viewform?usp=header");
+
+    }
+
+    else if (element === "DR MUHAMMAD HAIQAL BIN LUPIAMIR") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdN3ISyndCw3QBdgP7Cpu3qATASvPp3xsXymi-bHgirkP-gow/viewform?usp=header");
+
+    }
+
+    else if (element === "DR JULIA IZZATY BINTI MOHD JUFFRY") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSfR6n7v3EJnPeNvCwKTAoBXgyNy0ukRBvSDss_5XoEy13KJyg/viewform?usp=header");
+
+    }
+
+    else if (element === "DR EMILYN GAN WENQI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScUdxrBJSlQnCIukhuG0TmEpcL2uhrvHkamfIsrJ8mWF_Y3PQ/viewform?usp=header");
+
+    }
+
+    else if (element === "DR IMRAN HADI BIN MOHAMAD NIDZAM") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSems58KDe2PV4ud637B0OHVvuI00ERaNVr-PPIYQ_5dNaaWUw/viewform?usp=header");
+
+    }
+
+    else if (element === "DR WILLIAM TAN YAN WEI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSci6rI6_ONonjZhzLeFllV8qxSwvU1YUa2uiUx23Nxxi58z4Q/viewform?usp=header");
+
+    }
+
+    else if (element === "NINI LIYANA BINTI MOHD AININ") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScskNc3-8gW-PnYdlBsZq1CWetYenGvKVl4h3fr6dhxJFVqoQ/viewform?usp=header");
+
+    }
+
+    else if (element === "SITI SARAH BINTI MAT ALWI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSfWWK9knp7SfUoWr6jRL5KsccbImGnHAyChf4JLgCIJ-9sL6w/viewform?usp=header");
+
+    }
+
+    else if (element === "NOOR NADIA BINTI HUSAINI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSfylW0iKfOWPXTYVVsyCo8zCNOmcvLyQaw0qm5cedqDW-9jGg/viewform?usp=header");
+
+    }
+
+    else if (element === "MARIANA BINTI ABD RAHMAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSds76g2xpeGbnpp2xvcDbi6Yu7d3tkisVTfyEwPJ0zVZ82L9w/viewform?usp=header");
+
+    }
+
+    else if (element === "NURSYAHIDAH BINTI BAHAR") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdmzuA68tjKTUwwyBKO5oeUVmbkMqQRKmUs05r-c6Cx58Kv_g/viewform?usp=header");
+
+    }
+
+    else if (element === "AKMAL HAZIRAH BINTI MOHD ESA") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSecqqIiep4TDVMSZ27PnXPgzUa8qbz_c4aXwLM4IdvT93fpQQ/viewform?usp=header");
+
+    }
+
+    else if (element === "NORMALINA BINTI MD NOOR") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdGRmQemQ3aiH1SqCPybJu7dU11KpWku3iWZQA5d4mjPcLAEw/viewform?usp=header");
+
+    }
+
+    else if (element === "NOR MISZIYANA BINTI MISBAH") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSe9aN7EhbQ10pyHGi01IK7-qksv90BTN0me4FPFvCdaBG7XNA/viewform?usp=header");
+
+    }
+
+    else if (element === "SITI ARFAH BINTI ABD MOKMIN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSecq4TyKsScj9hcCNGeUvK9t1q2x5oCb1GZeBhGla7qn0zC2w/viewform?usp=header");
+
+    }
+
+    else if (element === "NOOR FADHILAH BINTI AMIR") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSecEzdHIJpwO_JMFYAunLRKG0iIol5a2Uqn-t_OVTmqast13A/viewform?usp=header");
+
+    }
+
+    else if (element === "ASMANIZA BINTI MOHD SAFIAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScDe0QswbpfDjg2JI62yNT6DsGbdw6sSWJzfP4dQG_7062FxQ/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD FARHAN BIN AB LATIFF") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScECD7VhB6aMq4qegZO-esZNV6Wysvr76V-QFkGaokmmxZ5Tw/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD KHAIRULAMRY BIN HASSAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeznxe2mZgJyY_kF8Ulh6QpREmbXthU61S9G98l0hgyGI_U_w/viewform?usp=header");
+
+    }
+
+    else if (element === "KHAIZIZUL BIN PETA") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeDDidn7LtVMNd8lNeU2kTb3W5ial_xBi_uI5hgyqNAvVZ-Tw/viewform?usp=header");
+
+    }
+
+    else if (element === "SITI AISHAH BINTI MUHANI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSen7g_ydTB97awWw6QU5JhylztVEZADtNl3HEETypx25tbipQ/viewform?usp=header");
+
+    }
+
+    else if (element === "NORHAZAMI BINTI RAHMAT") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSe4Zhsthqx1BcONa2j4mxdWWPTnbKzGfMivX4mhxsIdZZjIyw/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD SHAHRULMIZA AKMAL BIN MARIMI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSfI27iFKOvtIcXrYJfDhCUtbGfr3JZcuJRahcJxs2WPmnbNFA/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHAMAD HAFEEZ BIN HARON") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScGjHa7g-ZfCY7JFRWX60SqyCafb7nqatda2_xNGM5fueFmUA/viewform?usp=header");
+
+    }
+
+    else if (element === "CHARLIE VALENTINE") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScu3PwVY8EDeE7uYHK7NRb9Gf6dNEWD50jmAAP3-PxmKDL0BQ/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD SHAHRIL BIN MOHAMAD RAZI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScTtYTuWhr59qgCf8Ml38HSq_PMCTkcwGPqLt1puMHEJmGKQg/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD SAFREEN BIN KAMAROLZAMAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLScAWMcNmvcEgQGZ0olcor6tbOPv5A5S5jt63cITNOVG5p7UOg/viewform?usp=header");
+
+    }
+
+    else if (element === "NURUL AIN BINTI MOHAMAD") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSclKAlo0iIgneKf8zLqW-XPffQ5w7xGeyK126eiK2FWwPL3wg/viewform?usp=header");
+
+    }
+
+    else if (element === "MAGDALINA EMILIA ANAK JOHNBENOS") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSfwyFVBd4m57wg5faPpqrVero80NdpfamWNuIxJNqa5FjYIkA/viewform?usp=header");
+
+    }
+
+    else if (element === "NUR SHUHADA BINTI ZAINAL") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdSVTpSd0LP0ta1GP66ao-EiO-AUiWoaSFdhe8abYZnIbd11Q/viewform?usp=header");
+
+    }
+
+    else if (element === "NORZILLA BINTI MOHAMMAD ARIPIN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSd0ieCXtNxBSjG25XU7WZcHBq9d_vpnfkYqtS1a8X4m_Qd1xw/viewform?usp=header");
+
+    }
+
+    else if (element === "S.SHUMATHY SUBRAMANIAM") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdRFGH56NjvVruo74MOmBJ3NciiGAonQ3uWDxGZv-K5sD-AXQ/viewform?usp=header");
+
+    }
+
+    else if (element === "AZLIZAM BIN A.Z ZULKIFLI") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSf1sXm8sOiVUd_gAcfCzEMgRZJXzmKhnG_NOS6dfb2f9VzU0w/viewform?usp=header");
+
+    }
+
+    else if (element === "NURAIEN BINTI OTHMAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSew4ZCo4WuCguERVbfmp3EFmETqfBYZaaFqQkTgZOJnW5vyMw/viewform?usp=header");
+
+    }
+
+    else if (element === "NOORHAYATI BINTI MD NASIR") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSeob6OrKLLTOBwaDYQ-AeoiNUhC4c_wXL5hMuX_WYReFXzHSA/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD RAZI BIN MOHD SAID") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdDUDfr748PK-BS3zh4y_gfxnhft1ozUPTAex0Pu03Zj8rdrg/viewform?usp=header");
+
+    }
+
+    else if (element === "SHAMSUDIN BIN ABAS") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdTiUDsLD4TYUCk3ibh2taCqOTFC_LDfFUX3JqH7IlRm03zQg/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHD FARID BIN ABU HASSAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSd1Evr-_9CA4GfU5hGPavrYfZmdbdWbpQxvgqW-kNnwh7raDw/viewform?usp=header");
+
+    }
+
+    else if (element === "ZAIDI BIN MAK TAN") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdMsqzKpnzIsaXPxxkvdkr6rdw8GOVEPPgGCSVQz4NVP1SWRg/viewform?usp=header");
+
+    }
+
+    else if (element === "MOHAMAD FAIZ BIN AHMAD") {
+
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSewlJxisVWeDGfMM2ymnxE7X6-R5yLuP811BsNH_1k3qRi5yQ/viewform?usp=header");
+
     }
 
     else {
@@ -273,239 +565,6 @@
   function overlayOff() {
 
     document.getElementById("overlay").style.display = "none";
-
-  }
-
-  document.getElementById("post1").onchange = function () {
-
-    var opt1 = document.createElement("option");
-    var opt2 = document.createElement("option");
-    var opt3 = document.createElement("option");
-    var opt4 = document.createElement("option");
-    var opt5 = document.createElement("option");
-    var opt6 = document.createElement("option");
-    var opt7 = document.createElement("option");
-    var opt8 = document.createElement("option");
-    var opt9 = document.createElement("option");
-    var opt10 = document.createElement("option");
-    var opt11 = document.createElement("option");
-    var opt12 = document.createElement("option");
-    var opt13 = document.createElement("option");
-    var opt14 = document.createElement("option");
-    var opt15 = document.createElement("option");
-    var opt16 = document.createElement("option");
-    var opt17 = document.createElement("option");
-    var opt18 = document.createElement("option");
-    var opt19 = document.createElement("option");
-    var opt20 = document.createElement("option");
-    var opt21 = document.createElement("option");
-    var opt22 = document.createElement("option");
-    var opt23 = document.createElement("option");
-    var opt24 = document.createElement("option");
-    var opt25 = document.createElement("option");
-    var opt26 = document.createElement("option");
-    var opt27 = document.createElement("option");
-    var opt28 = document.createElement("option");
-    var opt29 = document.createElement("option");
-    var opt30 = document.createElement("option");
-
-    var post = document.getElementById("post1");
-    var name = document.getElementById("name1");
-    var element = post.options[post.selectedIndex].value;
-    //alert(element);
-
-    if (element === "Head") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "DR NOOR ARDINA BINTI BUANG";
-      name.appendChild(opt1);
-
-    }
-
-    else if (element === "PP") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "DR LAI JING KANG";
-      opt2.textContent = "DR AKMAL SYAFI' BIN DOREYAT";
-      opt3.textContent = "DR NUR FARAH IZZATI BINTI ZAINORDIN";
-      opt4.textContent = "DR AMNI AMIRAH BINTI SAIFULAZLAN";
-      opt5.textContent = "DR FARIDAH SUHAIMI";
-      opt6.textContent = "DR NOOR ELLYU HAFIZAH BINTI ZAHAISHA";
-      opt7.textContent = "DR LEE SUKHIN";
-      opt8.textContent = "DR NUR FATIN BINTI MOHAMMED";
-      opt9.textContent = "DR NURUL AISYAH BIN MOHAMMAD SUFIAN";
-      opt10.textContent = "DR DURGHA A/P GUNASEGARAN";
-      opt11.textContent = "DR IMRAN SHAFIQ BIN ABD HISAM";
-      opt12.textContent = "DR MUHAMMAD HAIQAL BIN LUPIAMIR";
-      opt13.textContent = "DR JULIA IZZATY BINTI MOHD JUFFRY";
-      opt14.textContent = "DR EMILYN GAN WENQI";
-      opt15.textContent = "DR IMRAN HADI BIN MOHAMAD NIDZAM";
-      opt16.textContent = "DR WILLIAM TAN YAN WEI";
-      name.appendChild(opt1);
-      name.appendChild(opt2);
-      name.appendChild(opt3);
-      name.appendChild(opt4);
-      name.appendChild(opt5);
-      name.appendChild(opt6);
-      name.appendChild(opt7);
-      name.appendChild(opt8);
-      name.appendChild(opt9);
-      name.appendChild(opt10);
-      name.appendChild(opt11);
-      name.appendChild(opt12);
-      name.appendChild(opt13);
-      name.appendChild(opt14);
-      name.appendChild(opt15);
-      name.appendChild(opt16);
-
-    }
-
-    else if (element === "JP") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "NINI LIYANA BINTI MOHD AININ";
-      opt2.textContent = "SITI SARAH BINTI MAT ALWI";
-      opt3.textContent = "NOOR NADIA BINTI HUSAINI";
-      opt4.textContent = "MARIANA BINTI ABD RAHMAN";
-      opt5.textContent = "NURSYAHIDAH BINTI BAHAR";
-      opt6.textContent = "AKMAL HAZIRAH BINTI MOHD ESA";
-      name.appendChild(opt1);
-      name.appendChild(opt2);
-      name.appendChild(opt3);
-      name.appendChild(opt4);
-      name.appendChild(opt5);
-      name.appendChild(opt6);
-
-    }
-
-    else if (element === "JT") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "NORMALINA BINTI MD NOOR";
-      opt2.textContent = "NOR MISZIYANA BINTI MISBAH";
-      name.appendChild(opt1);
-      name.appendChild(opt2);
-
-    }
-
-    else if (element === "PPP") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "SITI ARFAH BINTI ABD MOKMIN";
-      opt2.textContent = "NOOR FADHILAH BINTI AMIR";
-      opt3.textContent = "ASMANIZA BINTI MOHD SAFIAN";
-      opt4.textContent = "MOHD FARHAN BIN AB LATIFF";
-      opt5.textContent = "MOHD KHAIRULAMRY BIN HASSAN";
-      opt6.textContent = "KHAZIZUL BIN PETA";
-      opt7.textContent = "SITI AISHAH BINTI MUHANI";
-      opt8.textContent = "NORHAZAMI BINTI RAHMAT";
-      opt9.textContent = "MOHD SHAHRULMIZA AKMAL BIN MARIMI";
-      opt10.textContent = "MOHAMAD HAFEEZ BIN HARON";
-      opt11.textContent = "CHARLIE VALENTINE";
-      opt12.textContent = "MOHD SHAHRIL BIN MOHAMAD RAZI";
-      opt13.textContent = "MOHD SAFREEN BIN KAMAROLZAMAN";
-      opt14.textContent = "NURUL AIN BINTI MOHAMAD";
-      opt15.textContent = "MAGDALINA EMILIA ANAK JOHNBENOS";
-      name.appendChild(opt1);
-      name.appendChild(opt2);
-      name.appendChild(opt3);
-      name.appendChild(opt4);
-      name.appendChild(opt5);
-      name.appendChild(opt6);
-      name.appendChild(opt7);
-      name.appendChild(opt8);
-      name.appendChild(opt9);
-      name.appendChild(opt10);
-      name.appendChild(opt11);
-      name.appendChild(opt12);
-      name.appendChild(opt13);
-      name.appendChild(opt14);
-      name.appendChild(opt15);
-
-    }
-
-    else if (element === "PPK") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "NUR SHUHADA BINTI ZAINAL";
-      opt2.textContent = "NORZILLA BINTI MOHAMMAD ARIPIN";
-      opt3.textContent = "S. SHUMATHY SUBRAMANIAM";
-      opt4.textContent = "AZLIZAM BIN A.Z ZULKIFLI";
-      opt5.textContent = "NURAIEN BINTI OTHMAN";
-      opt6.textContent = "NOORHAYATI BINTI MD NASIR";
-      name.appendChild(opt1);
-      name.appendChild(opt2);
-      name.appendChild(opt3);
-      name.appendChild(opt4);
-      name.appendChild(opt5);
-      name.appendChild(opt6);
-
-    }
-
-    else if (element === "PKA") {
-
-      name.innerHTML = "";
-
-      for (i = name.options.length - 1; i >= 0; i--) {
-
-        name.removeChild(name.options[i]);
-
-      }
-
-      opt1.textContent = "MOHD RAZI BIN MOHD SAID";
-      opt2.textContent = "SHAMSUDIN BIN ABAS";
-      opt3.textContent = "MOHD FARID BIN ABU HASSAN";
-      opt4.textContent = "ZAIDI BIN MAK TAN";
-      opt5.textContent = "MOHAMAD FAIZ BIN AHMAD";
-      name.appendChild(opt1);
-      name.appendChild(opt2);
-      name.appendChild(opt3);
-      name.appendChild(opt4);
-      name.appendChild(opt5);
-
-    }
 
   }
 
@@ -573,7 +632,7 @@
       }
 
       opt1.textContent = "DR LAI JING KANG";
-      opt2.textContent = "DR AKMAL SYAFI' BIN DOREYAT";
+      opt2.textContent = "DR AKMAL SYAFI BIN DOREYAT";
       opt3.textContent = "DR NUR FARAH IZZATI BINTI ZAINORDIN";
       opt4.textContent = "DR AMNI AMIRAH BINTI SAIFULAZLAN";
       opt5.textContent = "DR FARIDAH SUHAIMI";
